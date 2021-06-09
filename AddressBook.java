@@ -9,9 +9,17 @@ public class AddressBook {
 /**
  * create a Contacts in Address Book
 Book. with multiple contact
- */
+ */	
+	public static void addAddressBook() {
+		String addressBookName = "mumbai";
+		addressBookMap.get(addressBookName);
+		List<Person> personList = new ArrayList<>();
+		addressBookMap.put(addressBookName, personList);
+	}
+
 	private static Scanner scanner = new Scanner(System.in);
 	static List<Person> personList = new ArrayList<>();
+	private static Map<String, List<Person>> addressBookMap = new HashMap();
 	
 
 	private void add() {
