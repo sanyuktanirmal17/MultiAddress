@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class AddressBook {
 /**
- * create a Contacts in Address
+ * create a Contacts in Address Book
 Book.
  */
 	private static Scanner scanner = new Scanner(System.in);
