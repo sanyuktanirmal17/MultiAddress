@@ -40,9 +40,51 @@ Book.
 			}
 		}
 	}
-
-	private void edit() {
+	/**
+ 	* Edit Contact in Address
+		Book.
+ 	*/
 	
+	private void edit() {
+		System.out.println(" Enter first name to Edit");
+		String setFirstName = scanner.next();
+		if (personList.isEmpty()) {
+			System.out.println("No records found");
+			return;
+		}
+		for (int i = 0; i < personList.size(); i++) {
+			Person person = new Person();
+			if (personList.get(i).getFirstName().equals(setFirstName)) {
+//				Person person = new Person();
+				System.out.println("Enter fname:");
+				person.setFirstName(scanner.next());
+				scanner.nextLine();
+				System.out.println("Enter Lname:");
+				person.setLastName(scanner.next());
+				scanner.nextLine();
+				System.out.println("Enter Address:");
+				person.setAddress(scanner.next());
+				scanner.nextLine();
+				System.out.println("city:");
+				person.setCity(scanner.next());
+				scanner.nextLine();
+				System.out.println("State:");
+				person.setState(scanner.next());
+				System.out.println("Zip:");
+				scanner.nextLine();
+				person.setZip(scanner.next());
+				System.out.println("Phone:");
+				person.setPhone(scanner.next());
+				scanner.nextLine();
+				System.out.println("Email:");
+				person.setEmail(scanner.next());
+				scanner.nextLine();
+
+				personList.remove(i);
+				personList.add(i, person);
+				System.out.println(personList);
+			}
+		}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to address book");
