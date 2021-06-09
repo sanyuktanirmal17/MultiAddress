@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AddressBook {
 /**
  * create a Contacts in Address Book
-Book.
+Book. with multiple contact
  */
 	private static Scanner scanner = new Scanner(System.in);
 	static List<Person> personList = new ArrayList<>();
@@ -37,6 +37,13 @@ Book.
 
 				personList.add(person);
 				System.out.println("Person added");
+				String addressBookName = "mumbai";
+				List<Person> personList = addressBookMap.get(addressBookName);
+				person.setFirstName("sanyu");
+				person.setLastName("nirmal");
+
+				personList.add(person);
+				addressBookMap.put(addressBookName, personList);
 			}
 		}
 	}
