@@ -85,7 +85,26 @@ Book.
 				System.out.println(personList);
 			}
 		}
+		/**
+        * Delete Contact in Address
+                Book.
+        */
 
+
+	private void delete() {
+		System.out.println(" Enter first name to delete");
+		String setFirstName = scanner.next();
+		if (personList.isEmpty()) {
+			System.out.println("No records found");
+			return;
+		}
+		for (int i = 0; i < personList.size(); i++) {
+			if (personList.get(i).getFirstName().equals(setFirstName)) {
+				personList.remove(i);
+			}
+		}
+		System.out.println(personList);
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to address book");
 		AddressBook detail = new AddressBook();
